@@ -16,9 +16,9 @@ jobs:
       with:
         dotnet-version: 9
          # publishes Blazor project to the release-folder
-    - run: dotnet build Schwimmschule.csproj
+    - run: dotnet build Schwimmschule/Schwimmschule.csproj
     - name: Publish .NET Core Project
-      run: dotnet publish Schwimmschule.csproj -c Release -o release --nologo
+      run: dotnet publish Schwimmschule/Schwimmschule.csproj -c Release -o release --nologo
       
     # add .nojekyll file to tell GitHub pages to not treat this as a Jekyll project. (Allow files and folders starting with an underscore)
     - name: Add .nojekyll file
