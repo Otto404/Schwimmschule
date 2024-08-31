@@ -25,11 +25,9 @@ jobs:
           
     # publishes Blazor project to the release-folder
     - name: Publish .NET Core Project
-      run: dotnet publish Schwimmschule/Schwimmschule.csproj -c:Release -o:public -p:GHPages=true
+      run: dotnet publish  -c:Release -o:public -p:GHPages=true
 
      # run: dotnet publish -c Release -o release --nologo -p:GHPages=true
-      
-
       
     # changes the base-tag in index.html from '/' to 'Schwimmschule' to match GitHub Pages repository subdirectory
     - name: Change base-tag in index.html from / to Schwimmschule
