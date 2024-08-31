@@ -25,7 +25,9 @@ jobs:
           
     # publishes Blazor project to the release-folder
     - name: Publish .NET Core Project
-      run: dotnet publish -c Release -o release --nologo -p:GHPages=true
+      run: dotnet publish Schwimmschule/Schwimmschule.csproj -c:Release -o:public -p:GHPages=true
+
+     # run: dotnet publish -c Release -o release --nologo -p:GHPages=true
       
 
       
@@ -41,13 +43,7 @@ jobs:
     - name: Add .nojekyll file
       run: touch release/wwwroot/.nojekyll
       
-   # - name: Deploy to GitHub Pages
-    #  uses: JamesIves/github-pages-deploy-action@v4.6.3
-     # with:
-      #  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-       # ACCESS_TOKEN:  ${{ secrets.ACCESS_TOKEN }}
-        #BRANCH: gh-pages
-       # FOLDER: release/wwwroot         
+       
       # Deploy the site
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v4
