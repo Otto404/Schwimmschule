@@ -1,0 +1,10 @@
+﻿
+
+docker build -t schimmschule .
+
+ergebnis: power shell friert ein.
+
+sollte aber möglichkeit geben zu starten mit.
+docker run -p 8080:80 schwimmschule
+
+gucken: docker ps -a
